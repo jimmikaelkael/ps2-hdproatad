@@ -1,0 +1,18 @@
+ps2-hdproatad - PS2 HD Pro Kit atad driver
+--------------------------------------------
+
+This is an IOP irx module to be used on PlayStation2 connected to an
+HD Pro Kit HDD. It comes as a replacement for the original Marcus R. Brown
+atad driver, and the module load attempt should be done before the regular
+one. The source code is based off Mr Brown's driver and adapted to HDpro
+interface to keep compatibility with other PS2SDK HDD related modules and
+libraries.
+
+To build sources you need the PS2SDK:
+https://github.com/ps2dev/ps2sdk
+
+Thanks to ICEQB for providing dumps and doing tests.
+
+----------------------------------------------------------------
+This is research software. It comes with absolutely no warranty.
+
