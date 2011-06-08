@@ -287,13 +287,16 @@ int _start(int argc, char *argv[])
 		goto out;
 	}
 
-	hdpro_io_start();
+	if (!hdpro_io_start()) {
+		M_PRINTF("Failed to detect HD Pro, exiting.\n");
+		goto out;
+	}
 
 	HDPROreg_IO8 = 0xe3;
 	CDVDreg_STATUS = 0;
 
 	if (hdpro_io_init() != 0) {
-		M_PRINTF("HD Pro Kit not detected, exiting.\n");
+		M_PRINTF("Failed to init HD Pro, exiting.\n");
 		goto out;
 	}
 
